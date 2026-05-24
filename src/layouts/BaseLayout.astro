@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-	title = 'Zuviri',
-	description = 'Sitio web de Zuviri',
+	title = 'Hugo Zuviri',
+	description = 'Sitio web de Hugo Zuviri',
 } = Astro.props;
 
 const canonicalURL = Astro.site
@@ -23,8 +23,6 @@ const canonicalURL = Astro.site
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={description} />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
 		<link rel="canonical" href={canonicalURL} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
