@@ -1,0 +1,59 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--font-display: var(--font-sans);
+
+	--color-brand-50: oklch(0.97 0.02 264);
+	--color-brand-100: oklch(0.93 0.04 264);
+	--color-brand-200: oklch(0.86 0.07 264);
+	--color-brand-300: oklch(0.76 0.11 264);
+	--color-brand-400: oklch(0.66 0.15 264);
+	--color-brand-500: oklch(0.55 0.18 264);
+	--color-brand-600: oklch(0.48 0.17 264);
+	--color-brand-700: oklch(0.42 0.15 264);
+	--color-brand-800: oklch(0.35 0.12 264);
+	--color-brand-900: oklch(0.28 0.09 264);
+	--color-brand-950: oklch(0.2 0.06 264);
+
+	--color-surface: oklch(0.99 0.002 264);
+	--color-surface-muted: oklch(0.96 0.004 264);
+	--color-foreground: oklch(0.2 0.02 264);
+	--color-foreground-muted: oklch(0.45 0.02 264);
+	--color-border: oklch(0.88 0.01 264);
+
+	--radius-sm: 0.375rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+	--radius-xl: 1rem;
+
+	--shadow-soft: 0 1px 2px oklch(0.2 0.02 264 / 0.06),
+		0 4px 12px oklch(0.2 0.02 264 / 0.04);
+}
+
+@layer base {
+	*,
+	*::before,
+	*::after {
+		@apply border-border;
+	}
+
+	html {
+		@apply scroll-smooth antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	body {
+		@apply bg-surface font-sans text-foreground;
+	}
+
+	:focus-visible {
+		@apply outline-2 outline-offset-2 outline-brand-500;
+	}
+
+	::selection {
+		@apply bg-brand-200 text-brand-950;
+	}
+}
